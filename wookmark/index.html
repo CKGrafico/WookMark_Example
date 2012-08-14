@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<script type="text/javascript" src="js/jquery.wookmark.min.js"></script>
+	<script type="text/javascript" src="js/jquery.resizeimg.min.js"></script>
+
+	<link href="js/wookmark.css" rel="stylesheet" type="text/css" />
+	<title>Plugin wookmark</title>
+</head>
+<body>
+	<section>
+		<ul>
+			<li><img src="images/1.jpg"/></li>
+			<li><img src="images/2.jpg"/></li>
+			<li><img src="images/3.jpg"/></li>
+			<li><img src="images/4.jpg"/></li>
+			<li><img src="images/5.jpg"/></li>
+			<li><img src="images/6.jpg"/></li>
+			<li><img src="images/7.jpg"/></li>
+			<li><img src="images/1.jpg"/></li>
+			<li><img src="images/2.jpg"/></li>
+			<li><img src="images/3.jpg"/></li>
+			<li><img src="images/4.jpg"/></li>
+			<li><img src="images/5.jpg"/></li>
+			<li><img src="images/6.jpg"/></li>
+			<li><img src="images/7.jpg"/></li>
+			<li><img src="images/1.jpg"/></li>
+			<li><img src="images/2.jpg"/></li>
+			<li><img src="images/3.jpg"/></li>
+			<li><img src="images/4.jpg"/></li>
+			<li><img src="images/5.jpg"/></li>
+			<li><img src="images/6.jpg"/></li>
+			<li><img src="images/7.jpg"/></li>
+			<li><img src="images/1.jpg"/></li>
+			<li><img src="images/2.jpg"/></li>
+			<li><img src="images/3.jpg"/></li>
+			<li><img src="images/4.jpg"/></li>
+			<li><img src="images/5.jpg"/></li>
+			<li><img src="images/6.jpg"/></li>
+			<li><img src="images/7.jpg"/></li>
+			<li><img src="images/1.jpg"/></li>
+			<li><img src="images/2.jpg"/></li>
+			<li><img src="images/3.jpg"/></li>
+			<li><img src="images/4.jpg"/></li>
+			<li><img src="images/5.jpg"/></li>
+			<li><img src="images/6.jpg"/></li>
+			<li><img src="images/7.jpg"/></li>
+			<li><img src="images/1.jpg"/></li>
+			<li><img src="images/2.jpg"/></li>
+			<li><img src="images/3.jpg"/></li>
+			<li><img src="images/4.jpg"/></li>
+			<li><img src="images/5.jpg"/></li>
+			<li><img src="images/6.jpg"/></li>
+			<li><img src="images/7.jpg"/></li>
+			<li><img src="images/1.jpg"/></li>
+			<li><img src="images/2.jpg"/></li>
+			<li><img src="images/3.jpg"/></li>
+			<li><img src="images/4.jpg"/></li>
+			<li><img src="images/5.jpg"/></li>
+			<li><img src="images/6.jpg"/></li>
+			<li><img src="images/7.jpg"/></li>
+			<li><img src="images/1.jpg"/></li>
+			<li><img src="images/2.jpg"/></li>
+			<li><img src="images/3.jpg"/></li>
+			<li><img src="images/4.jpg"/></li>
+			<li><img src="images/5.jpg"/></li>
+			<li><img src="images/6.jpg"/></li>
+			<li><img src="images/7.jpg"/></li>
+			<li><img src="images/1.jpg"/></li>
+			<li><img src="images/2.jpg"/></li>
+			<li><img src="images/3.jpg"/></li>
+			<li><img src="images/4.jpg"/></li>
+			<li><img src="images/5.jpg"/></li>
+			<li><img src="images/6.jpg"/></li>
+			<li><img src="images/7.jpg"/></li>
+			<li><img src="images/1.jpg"/></li>
+			<li><img src="images/2.jpg"/></li>
+			<li><img src="images/3.jpg"/></li>
+			<li><img src="images/4.jpg"/></li>
+			<li><img src="images/5.jpg"/></li>
+			<li><img src="images/6.jpg"/></li>
+			<li><img src="images/7.jpg"/></li>
+		</ul>
+	</section>
+
+
+	<script type="text/javascript">
+		//cuando se haya cargado todo
+		$(window).load(function() {
+			//reescalo todas las imágenes
+			$("img").resizeimg(200);
+
+			//llamo al plugin wookmark y le paso el contenedor de las imágenes
+			$('ul li').wookmark({
+				autoResize: true, //Hace que se corrija la posición de los elementos al cambiar resolución del navegador
+				offset: 2, // Margen entre elementos en píxels
+				itemWidth: 200 // Ancho del elemento contenedor de cada imagen
+			});
+		});
+	</script>
+</body>
+</html>
