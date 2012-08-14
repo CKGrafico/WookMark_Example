@@ -9,5 +9,5 @@ En este ejemplo podemos ver como configurar de forma adecuada este plugin de jQu
 
 ####Más información:
 Puedes encontrar más información sobre este plugin en los siguientes enlaces:
-- Vídeo youtube:
+- Vídeo youtube: http://www.youtube.com/watch?v=WqO72cYkbm0
 - Enlace artículo webcast: http://www.desarrolloweb.com/en-directo/plugins-responsive-jqueryio--7339.html
