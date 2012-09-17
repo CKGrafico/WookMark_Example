@@ -1,0 +1,11 @@
+/* No es necesario para wookmark está a modo de ejemplo*/
+html,body{
+	margin: 0;
+	padding: 0;
+}
+footer{
+	background: #000;
+	color: #FFF;
+	width: 100%;
+	text-align: center;
+}

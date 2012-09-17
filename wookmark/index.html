@@ -7,6 +7,7 @@
 	<script type="text/javascript" src="js/jquery.wookmark.min.js"></script>
 	<script type="text/javascript" src="js/jquery.resizeimg.min.js"></script>
 
+	<link href="extra.css" rel="stylesheet" type="text/css" />
 	<link href="js/wookmark.css" rel="stylesheet" type="text/css" />
 	<title>Plugin wookmark</title>
 </head>
@@ -84,21 +85,39 @@
 			<li><img src="images/6.jpg"/></li>
 			<li><img src="images/7.jpg"/></li>
 		</ul>
+		<footer>Esto es mi footer</footer>
 	</section>
+
 
 
 	<script type="text/javascript">
 		//cuando se haya cargado todo
 		$(window).load(function() {
+			var size = 200;
 			//reescalo todas las imágenes
-			$("img").resizeimg(200);
+			$("img").resizeimg(size);
 
 			//llamo al plugin wookmark y le paso el contenedor de las imágenes
 			$('ul li').wookmark({
 				autoResize: true, //Hace que se corrija la posición de los elementos al cambiar resolución del navegador
 				offset: 2, // Margen entre elementos en píxels
-				itemWidth: 200 // Ancho del elemento contenedor de cada imagen
+				itemWidth: size // Ancho del elemento contenedor de cada imagen
 			});
+
+			//codigo extra que sirve para posicionar una capa footer justo debajo de nuestra galería
+			var max_top = 0; //me dirá la imagen mas lejana
+			var max_height = 0; //me dirá la imagen más alta
+			$('ul li').each(function() {
+			    if(max_top < $(this).position().top){
+			    	max_top = $(this).position().top;
+			    }
+
+			    if(max_height < $(this).height()){
+			    	max_height = $(this).height();
+			    }
+			});
+			//lo selecciono de esta manera asi puedes cambiar ul por cualquier id de tu ul
+			$('ul').parent().find("footer").css({"position" : "absolute", "top" : max_top+max_height});
 		});
 	</script>
 </body>
